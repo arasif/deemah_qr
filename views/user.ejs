@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>
+    <%= pageTitle %>
+  </title>
+  <link rel="stylesheet" href="/custom.css" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+
+<body>
+  <%- include('partials/site-layoutqr') %>
+
+    <main class="page-shell1  appBody ">
+      <section class="card content verification-page">
+
+        <!-- <main class="verification-page"> -->
+        <div class="verification-document" id="verification-content">
+          <table class="verification-header" dir="rtl">
+            <tbody>
+              <tr>
+                <td class="verification-header__logos">
+                  <img class="verification-logo verification-logo--ajeer" src="/img/ajeer-logo.png" alt="ajeer">
+                  <img class="verification-logo verification-logo--hrsd" src="/img/mlsd-logo.png" alt="mlsd">
+                </td>
+                <td class="verification-header__title">
+                  <h1 class="verification-title">التحقق من تصريح أجير </h1>
+                </td>
+                <td class="verification-header__result">
+                  <strong class="verification-result verification-result--valid"> ساري / فعال
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <!-- </main> -->
+          <div class="verification-copy">
+            <p>تم التحقق من التصريح بنجاح</p>
+          </div>
+            <div class="detail-group">
+              <table class="verification-table 11" dir="rtl">
+                <tbody>
+                  <tr class="verification-table__section">
+                    <th colspan="4">
+                      <%= details[0].section1["name"] %>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">رقم التصريح </th>
+                    <td class="verification-table__value"><%= details[0].section1["rows"]["Permit Number"] %></td>
+
+                    <th class="verification-table__label">
+                    نوع التصريح
+                    </th>
+                    <td class="verification-table__value"><%= details[0].section1["rows"]["Permit Type"] %> </td>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">
+                     تاريخ بداية التصريح
+                    </th>
+                    <td class="verification-table__value"><%= details[0].section1["rows"]["Permit Start Date"] %></td>
+
+                    <th class="verification-table__label">
+                     تاريخ نهاية التصريح
+                    </th>
+                    <td class="verification-table__value"><%= details[0].section1["rows"]["Permit End Date"] %></td>
+                  </tr>
+                </tbody>
+              </table>
+
+          
+            
+              <table class="verification-table 22" dir="rtl">
+                <tbody>
+                  <tr class="verification-table__section">
+                    <th colspan="4">
+                      <%= details[1].section2["name"] %>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">
+                    اسم العامل
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["Worker Name"] %></td>
+
+                    <th class="verification-table__label">
+                     	رقم الهوية / الإقامة
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["ID / Residence Number"] %> </td>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">
+                     الجنسية
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["Nationality"] %></td>
+
+                    <th class="verification-table__label">
+                    المهنة
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["Occupation"] %></td>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">
+                    الجنس
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["Gender"] %></td>
+
+                    <th class="verification-table__label">
+                     تاريخ الميلاد
+                    </th>
+                    <td class="verification-table__value"><%= details[1].section2["rows"]["Date of Birth"] %></td>
+                  </tr>
+                </tbody>
+              </table>
+
+                <table class="verification-table 333" dir="rtl">
+                <tbody>
+                  <tr class="verification-table__section">
+                    <th colspan="4">
+                      <%= details[2]["section3"]["name"] %>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="verification-table__label">
+                    رقم المنشأة
+                    </th>
+                    <td class="verification-table__value"><%= details[2].section3["rows"]["Establishment Number"] %></td>
+
+                    <th class="verification-table__label">
+                    اسم المنشأة
+                    </th>
+                    <td class="verification-table__value"><%= details[2].section3["rows"]["Establishment Name"] %></td>
+                  </tr>
+         
+                </tbody>
+              </table> 
+
+
+      </section>
+    </main>
+
+
+
+    <!-- <%- include('partials/site-footer') %> -->
+</body>
+
+</html>

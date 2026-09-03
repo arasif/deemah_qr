@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= pageTitle %></title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <%- include('partials/site-layout') %>
+
+    <main class="page-shell">
+      <section class="card">
+        <form action="/users" method="post" class="form-grid">
+          <fieldset>
+            <legend>تفاصيل التصريح</legend>
+            <label>رقم التصريح (عربي)<input name="permitNumberAr" required /></label>
+            <label>نوع التصريح (عربي)<input name="permitTypeAr" required /></label>
+            <label>تاريخ البداية (عربي)<input name="startDateAr" required /></label>
+            <label>تاريخ النهاية (عربي)<input name="endDateAr" required /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>بيانات العامل</legend>
+            <label>اسم العامل (عربي)<input name="workerNameAr" required /></label>
+            <label>رقم الهوية / الإقامة (عربي)<input name="workerIdAr" required /></label>
+            <label>الجنسية (عربي)<input name="nationalityAr" required /></label>
+            <label>المهنة (عربي)<input name="occupationAr" required /></label>
+            <label>الجنس (عربي)<input name="genderAr" required /></label>
+            <label>تاريخ الميلاد (عربي)<input name="birthDateAr" required /></label>
+          </fieldset>
+
+          <fieldset>
+            <legend>بيانات المنشأة</legend>
+            <label>رقم المنشأة (عربي)<input name="establishmentNumberAr" required /></label>
+            <label>اسم المنشأة (عربي)<input name="establishmentNameAr" required /></label>
+          </fieldset>
+
+          <button type="submit">حفظ المستخدم وإنشاء QR</button>
+        </form>
+      </section>
+
+      <% if (user && user.qrCode) { %>
+        <section class="card qr-card">
+          <h2>تم إنشاء المستخدم بنجاح</h2>
+          <p>يمكنك مسح الرمز أدناه لعرض تفاصيل المستخدم.</p>
+          <img src="<%= user.qrCode %>" alt="QR Code" />
+        </section>
+      <% } %>
+
+      <% if (user && details.length) { %>
+        <section class="card">
+          <% details.forEach((group) => { %>
+            <div class="detail-group">
+              <h2><%= group.section %></h2>
+              <table class="details-table">
+                <tbody>
+                  <% group.rows.forEach((row) => { %>
+                    <tr>
+                      <th><%= row.labelAr %></th>
+                      <td><%= row.valueAr %></td>
+                      <td><%= row.valueEn %></td>
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+            </div>
+          <% }) %>
+        </section>
+      <% } %>
+    </main>
+
+    <%- include('partials/site-footer') %>
+  </body>
+</html>

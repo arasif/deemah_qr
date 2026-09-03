@@ -1,0 +1,29 @@
+<!-- Ensure document language and direction are set for browser translate detection -->
+<script>
+  (function(){
+    var locale = "<%= typeof locale !== 'undefined' ? locale : 'ar' %>";
+    try {
+      if (document && document.documentElement) {
+        if (document.documentElement.lang !== locale) document.documentElement.lang = locale;
+        var dir = locale === 'ar' ? 'rtl' : 'ltr';
+        if (document.documentElement.dir !== dir) document.documentElement.dir = dir;
+      }
+    } catch (e) {}
+  })();
+</script>
+
+<header class="site-header">
+  <div class="header-top">
+    <a class="brand" href="https://ajeer.qiwa.sa/landing" target="_blank" rel="noreferrer">
+      <img src="/img/ajeer-logo.png" alt="Ajeer logo" />
+      <span>أجير</span>
+    </a>
+    <nav class="main-nav" aria-label="Primary navigation">
+      <a href="https://ajeer.qiwa.sa/landing/about" target="_blank" rel="noreferrer">عن أجير</a>
+      <a href="https://ajeer.qiwa.sa/landing/services?user_type=provider" target="_blank" rel="noreferrer">خدمات أجير</a>
+      <a href="https://ajeer.qiwa.sa/landing/support" target="_blank" rel="noreferrer">الدعم</a>
+      <a href="https://ajeer.qiwa.sa/landing/faqs" target="_blank" rel="noreferrer">الأسئلة الشائعة</a>
+      <a class="nav-cta" href="https://ajeer.qiwa.sa/auth/qiwa/login" target="_blank" rel="noreferrer">تسجيل الدخول</a>
+    </nav>
+  </div>
+</header>
