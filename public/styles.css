@@ -308,7 +308,7 @@ button {
   letter-spacing: 0.2px;
   color: var(--brand-blue);
 } */
-.verification-result { font-weight: 800; font-size: 1rem; }
+/* .verification-result { font-weight: 800; font-size: 1rem; } */
 /* .verification-copy { font-size: 16px; color: var(--muted); } */
 .verification-table th, .verification-table td { font-size: 15px; }
 .verification-table__section th { font-size: 18px; }
