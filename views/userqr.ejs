@@ -9,6 +9,7 @@
   </title>
   <link rel="stylesheet" href="/custom.css" />
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/customFooter.css" />
 </head>
 
 <body>
@@ -19,7 +20,7 @@
           <% if (user && user.qrCode) { %>
       <section class="card qr-card">
         <img src="<%= user.qrCode %>" alt="QR Code" />
-         <% console.log(details[0]) %>
+         
         <div> <P> <%= details[0].section1["rows"]["Permit Number"] %> </P> </div>
         
       </section>

@@ -13392,13 +13392,6 @@ html[dir=rtl] .mainHeader__logoContainer--right {
     }
 }
 
-.mainHeader__top {
-    border-bottom: 1px solid #efeff0;
-    float: left;
-    height: 70px;
-    padding: 18px 15px;
-    width: 100%;
-}
 
 .verification-header {
     border-collapse: collapse;
@@ -13424,7 +13417,7 @@ html[dir=rtl] .mainHeader__logoContainer--right {
 
 .verification-title {
     font-size: 23px;
-    font-weight: 400;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -13490,4 +13483,3 @@ html[dir=rtl] .mainHeader__logoContainer--right {
     text-align: center;
     width: 26%;
 }
-

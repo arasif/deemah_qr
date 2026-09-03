@@ -1,0 +1,360 @@
+
+
+
+
+
+.mainFooter {
+    background: #fff;
+    color: #1f2548 !important;
+    float: left;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+}
+
+.mainFooter__top {
+    float: left;
+    padding: 10px 10px 10px;
+    width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .mainFooter__top {
+        padding:35px 0
+    }
+}
+
+.mainFooter__topNav {
+    float: left;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+.mainFooter__topNav:last-of-type {
+    margin-bottom: 0
+}
+
+.mainFooter__topNavTitle {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 20px
+}
+
+@media (max-width: 767.98px) {
+    .mainFooter__topNavTitle {
+        margin-bottom:5px
+    }
+}
+
+html[dir=rtl] .mainFooter__topNavTitle {
+    text-align: right
+}
+
+.mainFooter__topNavList {
+    list-style-type: none;
+    margin: 0
+}
+
+html[dir=rtl] .mainFooter__topNavList {
+    float: right
+}
+
+.mainFooter__topNavItem {
+    float: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding-right: 30px
+}
+
+.mainFooter__topNavItem:last-of-type {
+    padding-right: 0
+}
+
+html[dir=rtl] .mainFooter__topNavItem {
+    float: right;
+    padding-left: 15px;
+    padding-right: 0
+}
+
+.mainFooter__topNavLink {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px
+}
+
+.mainFooter__topNavLink:hover {
+    color: #021550;
+    text-decoration: none
+}
+
+@media (max-width: 767.98px) {
+    .mainFooter__topNavLink {
+        display:inline-block;
+        padding: 5px 0
+    }
+}
+
+.mainFooter__topNavLogotypes {
+    float: left
+}
+
+@media (max-width: 767.98px) {
+    .mainFooter__topNavLogotypes {
+        float:none;
+        margin-top: 10px;
+        transform: translateX(-5%)!important
+    }
+}
+
+.mainFooter__topNavLogo {
+    float: left;
+    margin-left: 40px
+}
+
+.mainFooter__topNavLogo:first-of-type {
+    margin-left: 0
+}
+
+.mainFooter__topNavLogo img {
+    max-width: 150px;
+    width: 100%
+}
+
+html[dir=rtl] .mainFooter__topNavLogo {
+    float: right;
+    margin-left: 0;
+    margin-left: 0!important;
+    margin-right: 40px;
+    margin-right: 0!important
+}
+
+.mainFooter__appLogo {
+    float: left
+}
+
+.mainFooter__appLogo img {
+    max-height: 32px
+}
+
+@media (max-width: 480px) {
+    .mainFooter__appLogo {
+        width:100%
+    }
+
+    html[dir=rtl] .mainFooter__appLogo {
+        text-align: right
+    }
+}
+
+html[dir=rtl] .mainFooter__appLogo {
+    float: right
+}
+
+.mainFooter__bottom {
+    background: #eaf0f3;
+    float: left;
+    padding: 20px 15px;
+    width: 100%
+}
+
+@media (max-width: 575.98px) {
+    .mainFooter__bottom {
+        padding:20px 0
+    }
+}
+
+.mainFooter__bottomNav {
+    float: left;
+    margin-left: 30px;
+    margin-top: 8px
+}
+
+@media (max-width: 600px) {
+    .mainFooter__bottomNav {
+        margin-left:15px
+    }
+}
+
+@media (max-width: 480px) {
+    .mainFooter__bottomNav {
+        margin:12px 0 5px
+    }
+}
+
+html[dir=rtl] .mainFooter__bottomNav {
+    float: right;
+    margin-left: 0;
+    margin-right: 30px;
+    margin-right: 0
+}
+
+.mainFooter__bottomNavList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0
+}
+
+.mainFooter__bottomNavItem {
+    float: left;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    padding: 0 15px
+}
+
+@media (max-width: 480px) {
+    .mainFooter__bottomNavItem {
+        padding:2px 30px 5px 0
+    }
+
+    html[dir=rtl] .mainFooter__bottomNavItem {
+        padding: 2px 0 5px 30px
+    }
+}
+
+html[dir=rtl] .mainFooter__bottomNavItem {
+    float: right
+}
+
+.mainFooter__bottomNavItemLink {
+    color: inherit
+}
+
+.mainFooter__bottomNavItemLink:hover {
+    color: #021550;
+    text-decoration: none
+}
+
+.mainFooter__langs {
+    float: left;
+    margin-left: 15px
+}
+
+html[dir=rtl] .mainFooter__langs {
+    float: right;
+    margin-left: 0;
+    margin-right: 15px
+}
+
+@media (max-width: 767.98px) {
+    .mainFooter__langs {
+        margin-left:-4px;
+        margin-top: 10px
+    }
+
+    html[dir=rtl] .mainFooter__langs {
+        margin-right: -4px
+    }
+}
+
+.mainFooter__langsList {
+    list-style-type: none;
+    margin: 4px 0 0;
+    padding: 0
+}
+
+.mainFooter__langsListItem {
+    float: left
+}
+
+html[dir=rtl] .mainFooter__langsListItem {
+    float: right
+}
+
+.mainFooter__langButton {
+    background: #fff;
+    border: 0;
+    border-radius: 3px;
+    color: #021550;
+    cursor: pointer;
+    float: left;
+    font-size: 1.2rem;
+    height: 24px;
+    margin: 0 5px;
+    padding: 2px 12px 4px;
+    text-align: center;
+    transition: .4s ease;
+    width: auto
+}
+
+.mainFooter__langButton:hover {
+    background: #9f42cb;
+    color: #fff
+}
+
+.mainFooter__langButton--active {
+    background: #021550;
+    color: #fff
+}
+
+.mainFooter__socials {
+    float: right
+}
+
+@media (max-width: 767.98px) {
+    .mainFooter__socials {
+        margin-top:12px
+    }
+}
+
+html[dir=rtl] .mainFooter__socials {
+    float: left
+}
+
+.mainFooter__socialsList {
+    list-style-type: none;
+    margin: 5px 0 0;
+    padding: 0
+}
+
+.mainFooter__socialsListItem {
+    float: left;
+    margin-left: 35px
+}
+
+@media (max-width: 480px) {
+    .mainFooter__socialsListItem {
+        margin-left:20px
+    }
+}
+
+.mainFooter__socialsListItem:first-of-type {
+    margin-left: 0
+}
+
+html[dir=rtl] .mainFooter__socialsListItem {
+    float: right;
+    margin-left: 0;
+    margin-right: 35px
+}
+
+html[dir=rtl] .mainFooter__socialsListItem:first-of-type {
+    margin-right: 0
+}
+
+.mainFooter__socialsLink {
+    color: #1f2548
+}
+
+.mainFooter__socialsLink:hover {
+    color: #021550;
+    text-decoration: none
+}
+
+.mainFooter__socialsLink i {
+    font-size: 1.8rem
+}
+
+.mainFooter--landing {
+    border-top: 1px solid #efeff0
+}
+
+.mainFooter--landing .container-fluid,.mainFooter--landing .container-lg,.mainFooter--landing .container-md,.mainFooter--landing .container-sm,.mainFooter--landing .container-xl,.mainFooter--landing .container-xxl {
+    max-width: 1240px
+}
+
+.mainFooter--landing .mainFooter__bottom {
+    background: #efeff0
+}
+
